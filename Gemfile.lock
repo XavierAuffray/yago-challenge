@@ -96,6 +96,10 @@ GEM
       reline (>= 0.3.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     dry-core (1.0.0)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
@@ -280,6 +284,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv-rails
   grape
   grape-active_model_serializers
   grape-entity

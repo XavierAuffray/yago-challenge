@@ -20,6 +20,8 @@ gem 'grape-active_model_serializers'
 gem 'interactor'
 gem 'rest-client'
 gem 'rack-cors'
+gem 'dotenv-rails'
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
