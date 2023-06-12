@@ -48,6 +48,7 @@ Rails.application.configure do
     authentication: 'login',
     enable_starttls_auto: true
   }
+  
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
