@@ -21,7 +21,6 @@ gem 'interactor'
 gem 'rest-client'
 gem 'rack-cors'
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'sqlite3', group: [:development, :test]
 
 
 group :development, :test do
