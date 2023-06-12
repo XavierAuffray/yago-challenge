@@ -12,6 +12,7 @@ module Yago
     config.load_defaults 7.0
     config.api_only = true
     config.time_zone = 'Brussels'
+    Dotenv::Railtie.load
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

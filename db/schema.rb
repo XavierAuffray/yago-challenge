@@ -11,9 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_06_11_215329) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "addresses", force: :cascade do |t|
     t.string "street_name"
     t.string "house_number"
@@ -21,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_11_215329) do
     t.string "postcode"
     t.string "city"
     t.string "country"
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_addresses_on_user_id"
@@ -39,7 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_11_215329) do
 
   create_table "ip_addresses", force: :cascade do |t|
     t.string "value"
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_ip_addresses_on_user_id"
@@ -58,9 +55,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_11_215329) do
   end
 
   create_table "quotes", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.boolean "active", default: true
-    t.jsonb "api_result"
+    t.json "api_result"
     t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

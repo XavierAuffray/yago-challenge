@@ -5,7 +5,7 @@ ruby "3.1.3"
 
 gem "rails", "~> 7.0.5"
 gem "sprockets-rails"
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.1", group: :production
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
@@ -20,7 +20,8 @@ gem 'grape-active_model_serializers'
 gem 'interactor'
 gem 'rest-client'
 gem 'rack-cors'
-gem 'dotenv-rails'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'sqlite3', group: [:development, :test]
 
 
 group :development, :test do
